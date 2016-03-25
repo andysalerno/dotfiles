@@ -17,8 +17,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'Syntastic'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'Solarized'
-Plugin 'tpope/vim-surround'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +63,9 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 imap <C-L> <Esc>
 
+map <Down> <C-e>
+map <Up> <C-y>
+
 " Syntastic defaults
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -75,3 +78,6 @@ let g:syntastic_check_on_wq = 0
 
 " Map F3 to autoformat
 noremap <F3> :Autoformat<CR>
+
+" better directory listing
+let g:netrw_liststyle=3
