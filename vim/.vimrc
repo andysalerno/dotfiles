@@ -1,5 +1,5 @@
 set nocompatible
- 
+
 " Begin Vundle settings
 filetype off                  " required
 
@@ -13,6 +13,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Begin Vundle plugins
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Syntastic'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -28,10 +29,10 @@ filetype plugin indent on    " required
 " Begin custom vim-airline settings
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#fnamemod=':t'
-" let g:airline_theme='PaperColor'
+let g:airline_theme='PaperColor'
 
 " Begin my custom Vim settings
-" set t_Co=256
+set t_Co=256
 set background=dark
 colorscheme PaperColor
 set backspace=2
@@ -78,6 +79,7 @@ let g:syntastic_check_on_wq = 0
 
 " Map F3 to autoformat
 noremap <F3> :Autoformat<CR>
+let g:formatter_py = ['yapf']
 
 " better directory listing
 let g:netrw_liststyle=3
